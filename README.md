@@ -10,7 +10,9 @@ Currently can only read - NOT program flash roms!
 At the moment tested and works with:
 
 SST49LF020A
+
 Pm49FL002
+
 SST49LF040
 
 Can read data of specific address, read whole flash, clear block, clear all flash and display Manufacturer and Device id.
