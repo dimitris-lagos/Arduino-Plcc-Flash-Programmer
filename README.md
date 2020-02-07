@@ -20,8 +20,12 @@ It's reaaaaaally slow (10minutes to read 256k flash), because it's using 1/2Mhz 
 
 #TODO
 
-~Header files
-~Structs for different flash devices / ~Maybe use the database of flashrom
-~Wrapper functions for structured "database"
+~Header files.
+
+~Structs for different flash devices / ~Maybe use the database of flashrom.
+
+~Wrapper functions for structured "database".
+
 ~Maybe give a try @ VUSB instead of using serial.
+
 ~Implement buffers to load firmware to program the flash.
