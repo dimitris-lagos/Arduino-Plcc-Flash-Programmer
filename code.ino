@@ -313,10 +313,6 @@ void block_erase(byte block){
     write_address(0x5555, 0xAA);
     write_address(0x2AAA, 0x55);
     write_address(block_addr, 0x50);
-    //while(1){Serial.println(read_address(block_addr),HEX);}
-    //while(!(read_address(block_addr) & 0x80)){Serial.println("lol");}
-    //data=read_address(block_addr) & 0x40;
-    //while(data!=0x80){data=read_address(block_addr) & 0x80;}
     delay(40);
     if(!toggle_d6()){
     Serial.print("Block ");Serial.print(block);Serial.println(" Erased ");}
@@ -378,21 +374,6 @@ void sd_init(){
   myFile = SD.open("bios.bin", FILE_READ);
   if (!myFile){Serial.println("Error opening bios.bin");}
   
-  }
-void test_bios(){
-  int i=0;
-  byte sdata[512];
-  while(i<=512){
-      sdata[i]=myFile.read(); 
-      i++;
-    }
-  i=0;
-  while(i<=512){
-    program_address(i,sdata[i]); 
-    i++; 
-    }
-  myFile.close();
-  Serial.println("Done flashing");
   }
   
 void flash_bios(){
